@@ -69,7 +69,7 @@ def build_params(arguments):
     '''
     params = {}
     for value in arguments:
-        key, val = value.split('=', 2)
+        key, val = value.split('=', 1)
         if key not in params:
             params[key] = []
         params[key].append(val)
