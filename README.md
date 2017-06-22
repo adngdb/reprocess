@@ -28,6 +28,8 @@ pip install -r requirements.txt
 ./reprocess.py --auth-token=XXX key1=value1 key2=value2
 ```
 
+You need an API token with the Reprocess Crashes permission in order to run this. If you already have the permission, you can generate your token on the [API Tokens page](https://crash-stats.mozilla.com/api/tokens/). Otherwise, you will need to [file a bug](https://bugzilla.mozilla.org/enter_bug.cgi?product=Socorro&component=General) in order to ask for that permission to be given to you.
+
 Options:
 
 ```
@@ -35,3 +37,7 @@ Options:
 -s, --batch-size INTEGER  Number of documents to query or send at once (default: 500)
 -e, --env [prod|stage]    Target crash-stats environment (stage or prod) (default: prod)
 ```
+
+## Other tools
+
+Peterbe has a [reprocess-supersearch](https://github.com/peterbe/reprocess-supersearch/) tool that works similarly for the same purpose. The main difference is that it accepts URLs instead of parameters.
